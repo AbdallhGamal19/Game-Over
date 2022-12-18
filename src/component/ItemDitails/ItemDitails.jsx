@@ -1,21 +1,22 @@
 
 import React from 'react'
-import { Helmet } from 'react-helmet';
+import { HelmetProvider,Helmet } from 'react-helmet-async';
 import { useParams } from 'react-router-dom'
 import Getgames from '../../Hooks/useGetGames';
 import Spinner from '../Spinner/Spinner';
-
 export default function ItemDitails() {
   let {itemId}=useParams();
   let {dataList}=Getgames(`https://free-to-play-games-database.p.rapidapi.com/api/game?id=${itemId}`)
  
   console.log(dataList);
   return  <>
-    <Helmet>
-      <meta charSet="utf-8" />
-      <title>{dataList.title}</title>
-      <link rel="canonical" href="http://mysite.com/example" />
-    </Helmet>
+    <HelmetProvider>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{dataList.title}</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
+    </HelmetProvider>
     {dataList<=0&&<Spinner/>}
     <div className="gameDitails">
       <div className="container">

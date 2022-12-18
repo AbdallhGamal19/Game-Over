@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import jwtDecode from 'jwt-decode'
 import Login from './component/Login/Login';
-import { createBrowserRouter,RouterProvider } from 'react-router-dom';
+import { createBrowserRouter,createHashRouter,RouterProvider } from 'react-router-dom';
 import Regester from './component/Regester/Regester';
 import RoutLayout from './component/RoutLayout/RoutLayout';
 import Home from './component/Home/Home';
@@ -27,16 +27,7 @@ import Flight from './component/Categories/Flight/Flight';
 import Battle from './component/Categories/Battle/Battle';
 import ItemDitails from './component/ItemDitails/ItemDitails';
 import ProtectedRoute from './component/ProtectedRoute/ProtectedRoute';
-import ErrorPage from './component/ErrorPage/ErrorPage';
-import { Offline, Online } from 'react-detect-offline';
-
-
-
-
-
-
-
-
+import { Offline } from 'react-detect-offline';
 
 function App() {
   useEffect(()=>{
@@ -52,8 +43,8 @@ function App() {
 
   }
 
-  let routers=createBrowserRouter([
-    {path:'/' , element: <RoutLayout userData ={userData} setUserData={setUserData} />,errorElement:<ErrorPage/> ,children:[
+  let routers=createHashRouter([
+    {path:'/' , element: <RoutLayout userData ={userData} setUserData={setUserData} /> ,children:[
       {path :'regester' , element: <Regester/> },
       {path:'login' , element: <Login saveUserData={saveUserData}/> },
       {index:true, element: <ProtectedRoute><Home/></ProtectedRoute>  },
@@ -82,8 +73,11 @@ function App() {
 
 
   return <>
+  
+  <RouterProvider router={routers}/>
+
     <Offline><div className="text-white position-fixed top-50 p-3 rounded-3 ms-3 bg-gradient ">you are offline!</div></Offline>
-    <RouterProvider router={routers}/>
+    
      
   </>
      

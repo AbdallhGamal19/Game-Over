@@ -12,8 +12,15 @@ body{
 background-color: var(--main-bg);
 color: var(#ebf1ed);
 }
+.navbar {
+  z-index: 100;
+}
 .link:hover {
   color: #b8bbc0;
+  
+}
+.dropdown-border {
+  border: none !important;
   
 }
 .link {
@@ -49,6 +56,10 @@ color: var(--text-color);
 .btn-color{
   background-color: var(--btn-color);
 }
+.container {
+  margin-top: 100px;
+  
+}
 .btn-free {
   cursor:context-menu;
 }
@@ -81,16 +92,6 @@ color: var(--text-color);
 }
 .btn-play-now:hover,.btn-free {
   background-color: #155ac2 !important;
-}
-@media screen and (min-width:992px) {
-  .first-navbar {
-    display: none;
-  }
-}
-@media screen and (max-width:992px) {
-  .second-navbar {
-    display: none;
-  }
 }
 .spinner-box {
   background-color: var(--main-bg);

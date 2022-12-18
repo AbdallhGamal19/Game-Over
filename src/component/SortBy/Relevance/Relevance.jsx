@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { HelmetProvider,Helmet } from 'react-helmet-async';
 import Getgames from '../../../Hooks/useGetGames';
 import ItemGame from '../../ItemGame/ItemGame';
 import Spinner from '../../Spinner/Spinner';
@@ -7,11 +7,13 @@ export default function Relevance() {
     let {dataList,endIndex,addGame}=Getgames(`https://free-to-play-games-database.p.rapidapi.com/api/games?sort-by=relevance`)
     return (
         <>
-         <Helmet>
-        <meta charSet="utf-8" />
-        <title>Relevance Games</title>
-        <link rel="canonical" href="http://mysite.com/example" />
-      </Helmet>
+        <HelmetProvider>
+          <Helmet>
+            <meta charSet="utf-8" />
+            <title>RelevanceGames</title>
+            <link rel="canonical" href="http://mysite.com/example" />
+          </Helmet>
+        </HelmetProvider>
         {dataList<=0&&<Spinner/>}
         <div className="container">
             <div className="row g-3">

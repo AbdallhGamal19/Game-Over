@@ -1,5 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+
+import { HelmetProvider,Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Getgames from '../../Hooks/useGetGames';
 import ItemGame from '../ItemGame/ItemGame';
@@ -12,11 +13,14 @@ export default function Home() {
   let {dataList}=Getgames(`https://free-to-play-games-database.p.rapidapi.com/api/games?category=battle-royale`)
   return (
     <>
-    <Helmet>
-        <meta charSet="utf-8" />
-        <title>Home Page</title>
-        <link rel="canonical" href="http://mysite.com/example" />
+    <HelmetProvider>
+      <Helmet>
+      <meta charSet="utf-8" />
+          <title>Home Page</title>
+          <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
+    </HelmetProvider>
+    
       {dataList<=0&&<Spinner/>}
       <header className=' home-bg text-white text-center '>
         <div className="conten py-5 ">
