@@ -10,7 +10,7 @@ export default function Navbar({userData,logOut}) {
   return (<>
 
 <nav className= {` ${style.nav} navbar navbar-expand-lg position-relative `}>
-  <div className=  {` container-fluid position-fixed top-0 bg-dark p-2`}>
+  <div className=  {` container-fluid  bg-dark p-2`}>
     <div className="logo fs-6 d-flex justify-conten-center align-items-center">
       <img className={`${style.img}`} src={logo} alt="logo" />
       <span className={`${style.textLogo}`}>GameOver</span>

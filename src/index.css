@@ -148,4 +148,6 @@ color: var(--text-color);
     transform: rotate(-360deg);
   }
 }
-    
+.alertsOfNames {
+  width: 45% !important;
+}
