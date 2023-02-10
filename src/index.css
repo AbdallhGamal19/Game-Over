@@ -151,3 +151,17 @@ color: var(--text-color);
 .alertsOfNames {
   width: 45% !important;
 }
+
+@media screen and (max-width:565px) {
+  .listOfNav{
+    font-size: 12px !important;
+    
+  }
+  .rightAndLeft {
+    flex-direction: column;
+  }
+  .dropdown-menu {
+    position: absolute !important;
+    left: -70% !important;
+  }
+}

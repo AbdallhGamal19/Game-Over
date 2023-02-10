@@ -68,8 +68,6 @@ else{
       <title>Login</title>
       <link rel="canonical" href="http://mysite.com/example" />
     </Helmet>
-    {error&&<div className="alert alert-danger w-75 m-auto mb-3">{error}</div>}
-    {erorrList.map((err,index)=><div key={index} className='alert alert-info'>{err.message}</div>)}
     <section>
       <div className="container">
           <div className="conten row">
@@ -79,7 +77,9 @@ else{
             <h2 className='mb-3 mainColor fs-4'>Log in to GameOver</h2>
             <form onSubmit={submitRegisterData}>
               <input onChange={setRegisterDataToUser} className='form-control mb-3 p-2' type="email" name="email"  placeholder='Email' />
+              {erorrList.filter((err)=> err.context.label==="email")[0]?<div className=" alert alert-danger  m-auto mb-3 p-1 ms-0">You should enter a valid email.</div> :''}
               <input onChange={setRegisterDataToUser}  className='form-control mb-3 p-2' type="password" name="password"  placeholder='Password' />
+              {erorrList.filter((err)=> err.context.label==="password")[0]?<div className=" alert alert-danger  m-auto mb-3 p-1 ms-0">It must be 4 to 8 characters long</div> :''}
               <button className= {`${style.bottonBg} form-control mb-3 p-2 fs-5`} type="submit">{loding?<><i className="fa fa-spinner fa-spin text-white"></i></>:'Login'}</button>
               </form> 
               <hr />
