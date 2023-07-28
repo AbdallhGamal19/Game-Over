@@ -1,0 +1,23 @@
+img{
+    width: 70px;
+    margin-right: 5px;
+    
+}
+.join:hover {
+    color: #4799EB;
+}
+.join{
+    border: 1px solid #4799EB;
+    display: block;
+    color: #4799EB;
+}
+
+nav {
+    box-shadow: 0px 20px 40px 50px #00000057;
+}
+
+.textLogo {
+    font-family: Xanh Mono,monospace;
+    color: white;
+
+}

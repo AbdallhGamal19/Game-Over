@@ -1,0 +1,167 @@
+:root{
+--main-bg :#272B30;
+--bg-genre:#6C757D;
+--input-bg :#b8bbc0;
+--main-color:#AAAAAA;
+--text-color :#637569;
+--color-link:#ffffff8c;
+--btn-color :#0D6EFD;
+}
+
+body{
+background-color: var(--main-bg);
+color: var(#ebf1ed);
+}
+.navbar {
+  z-index: 100;
+}
+.link:hover {
+  color: #b8bbc0;
+  
+}
+.dropdown-border {
+  border: none !important;
+  
+}
+.link {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+.mainColor {
+color: var(--main-color);
+}
+.textColor {
+color: var(--text-color);
+}
+
+.logo span {
+  font-family: La Belle Aurore,cursive;
+  
+}
+.my-input{
+  color: #fff !important;
+  background-color: #1C1E22 !important;
+  border: none !important;
+}
+.item-box{
+  background-color: #212529;
+  transition: 0.5s;
+}
+.item-box:hover {
+  transform:  perspective(600px) translateZ(-15px) ;
+  
+ 
+}
+.btn-color{
+  background-color: var(--btn-color);
+}
+.container {
+  margin-top: 100px;
+  
+}
+.btn-free {
+  cursor:context-menu;
+}
+.btn-logOut {
+  cursor: pointer;
+}
+.genre {
+  background-color: var(--bg-genre);
+}
+.home-bg .conten {
+  background-image: linear-gradient(90deg,#000,transparent,#000);
+}
+.home-bg {
+  background-image: url(../src/component/Home/image/paladins.b44d33d6e7ee1ba8.png);
+  background-position: center center;
+  background-size: contain;
+}
+.free-word {
+  color: #0DCAF0;
+}
+
+.see-more:hover {
+  color: #4799EB;
+  border: 1px solid #2a5077;
+}
+.see-more{
+  border: 1px solid #4799EB;
+  display: block;
+  color: #4799EB;
+}
+.btn-play-now:hover,.btn-free {
+  background-color: #155ac2 !important;
+}
+.spinner-box {
+  background-color: var(--main-bg);
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  border: 3px solid;
+  border-color: #FFF #FFF transparent transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after,
+.loader::before {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px solid;
+  border-color: transparent transparent #FF3D00 #FF3D00;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotationBack 0.5s linear infinite;
+  transform-origin: center center;
+}
+.loader::before {
+  width: 32px;
+  height: 32px;
+  border-color: #FFF #FFF transparent transparent;
+  animation: rotation 1.5s linear infinite;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.alertsOfNames {
+  width: 45% !important;
+}
+
+@media screen and (max-width:565px) {
+  .listOfNav{
+    font-size: 12px !important;
+    
+  }
+  .rightAndLeft {
+    flex-direction: column;
+  }
+  .dropdown-menu {
+    position: absolute !important;
+    left: -70% !important;
+  }
+}

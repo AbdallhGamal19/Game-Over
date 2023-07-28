@@ -1,0 +1,29 @@
+.imGbox {
+    background-image: url(./images/gaming.ebaf2ffc84f4451d.jpg);
+    background-position: center center;
+    background-size: cover;
+  
+}
+.formBg {
+    background-color: #32383E;
+}
+.logo {
+    width: 100px;
+   
+}
+.bottonBg {
+    background-color: #3A3F44 !important;
+    color: white !important;
+    border-color: #22241D !important;
+}
+input[type ='text']{
+    width: 47%;
+}
+
+.links {
+    color: #637569 ;
+}
+a {
+    text-decoration:underline !important;
+}
+
