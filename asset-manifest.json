@@ -1,11 +1,10 @@
 {
   "files": {
-    "main.css": "/Game-Over/static/css/main.3838c496.css",
-    "main.js": "/Game-Over/static/js/main.d14cc8b1.js",
+    "main.css": "/Game-Over/static/css/main.c539343c.css",
+    "main.js": "/Game-Over/static/js/main.9564e12d.js",
     "static/js/787.41e9e6e2.chunk.js": "/Game-Over/static/js/787.41e9e6e2.chunk.js",
     "static/media/fa-solid-900.ttf": "/Game-Over/static/media/fa-solid-900.b1a653db79258eeccc5d.ttf",
     "static/media/paladins.png": "/Game-Over/static/media/paladins.b44d33d6e7ee1ba8.0fddd1fbe0a5e0a0af93.png",
-    "static/media/gaming.jpg": "/Game-Over/static/media/gaming.ebaf2ffc84f4451d.d5751ff804c935b205d3.jpg",
     "static/media/fa-brands-400.ttf": "/Game-Over/static/media/fa-brands-400.450a5c898f0b184b968b.ttf",
     "static/media/logo.png": "/Game-Over/static/media/logo.548dc5719c2345c22eef.png",
     "static/media/fa-solid-900.woff2": "/Game-Over/static/media/fa-solid-900.41c0f706d8ce93933771.woff2",
@@ -15,12 +14,12 @@
     "static/media/fa-v4compatibility.ttf": "/Game-Over/static/media/fa-v4compatibility.e314b618134d5be20996.ttf",
     "static/media/fa-v4compatibility.woff2": "/Game-Over/static/media/fa-v4compatibility.4ee7f902d88f819e251c.woff2",
     "index.html": "/Game-Over/index.html",
-    "main.3838c496.css.map": "/Game-Over/static/css/main.3838c496.css.map",
-    "main.d14cc8b1.js.map": "/Game-Over/static/js/main.d14cc8b1.js.map",
+    "main.c539343c.css.map": "/Game-Over/static/css/main.c539343c.css.map",
+    "main.9564e12d.js.map": "/Game-Over/static/js/main.9564e12d.js.map",
     "787.41e9e6e2.chunk.js.map": "/Game-Over/static/js/787.41e9e6e2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3838c496.css",
-    "static/js/main.d14cc8b1.js"
+    "static/css/main.c539343c.css",
+    "static/js/main.9564e12d.js"
   ]
 }
